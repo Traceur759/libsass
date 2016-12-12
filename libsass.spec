@@ -1,5 +1,5 @@
 Name:           libsass
-Version:        3.3.6
+Version:        3.4.0
 Release:        1%{?dist}
 Summary:        C/C++ port of the Sass CSS precompiler
 
@@ -67,5 +67,8 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Mon Dec 12 2016 Aurelien Bompard <abompard@fedoraproject.org> - 3.4.0-1
+- version 3.4.0: https://github.com/sass/libsass/releases/tag/3.4.0
+
 * Wed Sep 30 2015 Aurelien Bompard <abompard@fedoraproject.org> - 3.3.6-1
 - initial package
