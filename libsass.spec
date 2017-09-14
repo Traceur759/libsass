@@ -1,6 +1,6 @@
 Name:           libsass
 Version:        3.4.5
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        C/C++ port of the Sass CSS precompiler
 
 License:        MIT
@@ -35,6 +35,7 @@ developing applications that use %{name}.
 
 %prep
 %setup -q
+export LIBSASS_VERSION=%{version}
 autoreconf --force --install
 
 
@@ -66,6 +67,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Thu Sep 14 2017 Miro Hrončok <mhroncok@redhat.com> - 3.4.5-4
+- Export LIBSASS_VERSION, so it is possible to get it via libsass_version()
+
 * Thu Aug 03 2017 Fedora Release Engineering <releng@fedoraproject.org> - 3.4.5-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
 
